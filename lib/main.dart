@@ -1,6 +1,8 @@
 void main() {
-  var service = CustomerService();
-  var command = AddCustomerCommand(service);
+  var action = CustomerService();
+  //command is tailored to call the action (addCustomer) in by the execute method.
+  var command = AddCustomerCommand(action);
+  //button only has a click event that calls the execute.
   var button = Button(command);
   button.click();
 }
